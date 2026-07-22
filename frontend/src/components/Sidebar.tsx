@@ -41,8 +41,8 @@ export const Sidebar: React.FC = () => {
           E
         </div>
         <div>
-          <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#f9fafb', lineHeight: 1.1 }}>Mini ERP Portal</h2>
-          <span style={{ fontSize: '0.7rem', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Operations CRM</span>
+          <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)', lineHeight: 1.1 }}>Mini ERP Portal</h2>
+          <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Operations CRM</span>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export const Sidebar: React.FC = () => {
         <div style={{
           marginTop: 'auto',
           padding: '1rem',
-          backgroundColor: '#151d2a',
+          backgroundColor: 'var(--bg-input)',
           borderRadius: '12px',
           border: '1px solid var(--border-color)',
           display: 'flex',
@@ -96,7 +96,7 @@ export const Sidebar: React.FC = () => {
             {user.name.charAt(0)}
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#fff', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
               {user.name}
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop: '2px' }}>

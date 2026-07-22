@@ -276,7 +276,7 @@ export const ProductsPage: React.FC = () => {
                     return (
                       <tr key={p.id}>
                         <td>
-                          <strong style={{ fontSize: '0.95rem', color: '#fff' }}>{p.name}</strong>
+                          <strong style={{ fontSize: '0.95rem', color: 'var(--text-primary)' }}>{p.name}</strong>
                           <div style={{ fontSize: '0.8rem', color: 'var(--accent-secondary)', display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop: '2px' }}>
                             <Tag size={12} /> SKU: {p.sku}
                           </div>

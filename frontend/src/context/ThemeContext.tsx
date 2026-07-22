@@ -11,12 +11,12 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem('erp-theme');
-    return (saved as Theme) || 'dark'; // Default to dark as per original design
+    const saved = localStorage.getItem('erp-theme-light');
+    return (saved as Theme) || 'light';
   });
 
   useEffect(() => {
-    localStorage.setItem('erp-theme', theme);
+    localStorage.setItem('erp-theme-light', theme);
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 

@@ -113,7 +113,7 @@ export const StockLogsPage: React.FC = () => {
                         </div>
                       </td>
                       <td>
-                        <strong style={{ fontSize: '0.9rem', color: '#fff' }}>{log.product?.name || 'Unknown Product'}</strong>
+                        <strong style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>{log.product?.name || 'Unknown Product'}</strong>
                         <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
                           SKU: {log.product?.sku}
                         </div>

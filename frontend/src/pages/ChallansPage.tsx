@@ -272,7 +272,7 @@ export const ChallansPage: React.FC = () => {
                         <strong style={{ fontSize: '0.95rem', color: 'var(--accent-primary)' }}>{c.challanNumber}</strong>
                       </td>
                       <td>
-                        <strong style={{ fontSize: '0.9rem', color: '#fff' }}>{c.customerSnap?.name || c.customer?.name}</strong>
+                        <strong style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}>{c.customerSnap?.name || c.customer?.name}</strong>
                         <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
                           {c.customerSnap?.businessName || c.customer?.businessName}
                         </div>
@@ -471,7 +471,7 @@ export const ChallansPage: React.FC = () => {
           }}>
             <div>
               <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Calculated Total Quantity:</span>
-              <strong style={{ display: 'block', fontSize: '1.1rem', color: '#fff' }}>{totals.qty} items</strong>
+              <strong style={{ display: 'block', fontSize: '1.1rem', color: 'var(--text-primary)' }}>{totals.qty} items</strong>
             </div>
             <div style={{ textAlign: 'right' }}>
               <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Calculated Total Amount:</span>

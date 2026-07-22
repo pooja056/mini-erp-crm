@@ -107,14 +107,14 @@ export const CustomerDetailPage: React.FC = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.25rem' }}>
             <div>
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Phone Contact</span>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.2rem', color: '#fff', fontWeight: 600 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.2rem', color: 'var(--text-primary)', fontWeight: 600 }}>
                 <Phone size={16} color="var(--accent-secondary)" /> {customer.mobile}
               </div>
             </div>
 
             <div>
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Email Address</span>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.2rem', color: '#fff', fontWeight: 600 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.2rem', color: 'var(--text-primary)', fontWeight: 600 }}>
                 <Mail size={16} color="var(--accent-secondary)" /> {customer.email}
               </div>
             </div>
@@ -190,7 +190,7 @@ export const CustomerDetailPage: React.FC = () => {
                         <Clock size={12} /> {new Date(n.createdAt).toLocaleString()}
                       </div>
                     </div>
-                    <p style={{ fontSize: '0.9rem', color: '#fff', whiteSpace: 'pre-wrap' }}>{n.note}</p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-primary)', whiteSpace: 'pre-wrap' }}>{n.note}</p>
                   </div>
                 ))
               )}

@@ -245,7 +245,7 @@ export const CustomersPage: React.FC = () => {
                   customers.map((c) => (
                     <tr key={c.id}>
                       <td>
-                        <strong style={{ fontSize: '0.95rem', color: '#fff' }}>{c.name}</strong>
+                        <strong style={{ fontSize: '0.95rem', color: 'var(--text-primary)' }}>{c.name}</strong>
                         <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.3rem', marginTop: '2px' }}>
                           <Building size={12} /> {c.businessName}
                           {c.gstNumber && <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>({c.gstNumber})</span>}

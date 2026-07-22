@@ -1,12 +1,60 @@
-:root, [data-theme='dark'] {
+:root, [data-theme='light'] {
   --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
+  /* Premium Light Minimalist Palette */
+  --bg-main: #f8fafc;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-input: #f8fafc;
+  --bg-stat-card: #ffffff;
+  --bg-table-th: #f1f5f9;
+  
+  --border-color: rgba(0, 0, 0, 0.06);
+  --border-focus: #4f46e5;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --accent-primary: #4f46e5;
+  --accent-primary-hover: #4338ca;
+  --accent-secondary: #0ea5e9;
+
+  --success-bg: rgba(16, 185, 129, 0.1);
+  --success-text: #059669;
+  --success-border: rgba(16, 185, 129, 0.2);
+
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --warning-text: #d97706;
+  --warning-border: rgba(245, 158, 11, 0.2);
+
+  --danger-bg: rgba(239, 68, 68, 0.1);
+  --danger-text: #dc2626;
+  --danger-border: rgba(239, 68, 68, 0.2);
+
+  --info-bg: rgba(59, 130, 246, 0.1);
+  --info-text: #2563eb;
+  --info-border: rgba(59, 130, 246, 0.2);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 15px 35px -5px rgba(0, 0, 0, 0.08), 0 10px 15px -6px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='dark'] {
   /* Modern Dark Executive Palette */
   --bg-main: #0b0f19;
   --bg-sidebar: #111827;
   --bg-card: #1f293d;
   --bg-card-hover: #26334d;
   --bg-input: #151d2a;
+  --bg-stat-card: linear-gradient(135deg, #1f293d 0%, #172033 100%);
+  --bg-table-th: #161e2e;
   
   --border-color: rgba(255, 255, 255, 0.08);
   --border-focus: #4f46e5;
@@ -35,52 +83,9 @@
   --info-text: #60a5fa;
   --info-border: rgba(59, 130, 246, 0.3);
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
-}
-
-[data-theme='light'] {
-  --bg-main: #f3f4f6;
-  --bg-sidebar: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f9fafb;
-  --bg-input: #f9fafb;
-  
-  --border-color: rgba(0, 0, 0, 0.08);
-  --border-focus: #4f46e5;
-
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
-
-  --accent-primary: #4f46e5;
-  --accent-primary-hover: #4338ca;
-  --accent-secondary: #0ea5e9;
-
-  --success-bg: rgba(16, 185, 129, 0.1);
-  --success-text: #059669;
-  --success-border: rgba(16, 185, 129, 0.2);
-
-  --warning-bg: rgba(245, 158, 11, 0.1);
-  --warning-text: #d97706;
-  --warning-border: rgba(245, 158, 11, 0.2);
-
-  --danger-bg: rgba(239, 68, 68, 0.1);
-  --danger-text: #dc2626;
-  --danger-border: rgba(239, 68, 68, 0.2);
-
-  --info-bg: rgba(59, 130, 246, 0.1);
-  --info-text: #2563eb;
-  --info-border: rgba(59, 130, 246, 0.2);
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -249,7 +254,7 @@ h3 { font-size: 1.1rem; font-weight: 600; }
 }
 
 .table th {
-  background-color: #161e2e;
+  background-color: var(--bg-table-th);
   color: var(--text-secondary);
   font-size: 0.75rem;
   font-weight: 700;
@@ -346,7 +351,7 @@ h3 { font-size: 1.1rem; font-weight: 600; }
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #1f293d 0%, #172033 100%);
+  background: var(--bg-stat-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 1.25rem 1.5rem;
@@ -354,6 +359,11 @@ h3 { font-size: 1.1rem; font-weight: 600; }
   align-items: center;
   gap: 1.25rem;
   box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .stat-icon {
@@ -378,12 +388,16 @@ h3 { font-size: 1.1rem; font-weight: 600; }
   font-weight: 500;
 }
 
-[data-theme='light'] .table th {
-  background-color: #f9fafb;
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
-
-[data-theme='light'] .stat-card {
-  background: #ffffff;
+[data-theme='dark'] .glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Overrides */
