@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const customer_controller_1 = require("../controllers/customer.controller");
+const auth_1 = require("../middleware/auth");
+const validate_1 = require("../middleware/validate");
+const router = (0, express_1.Router)();
+router.use(auth_1.authenticateJWT);
+router.get('/', (0, auth_1.requireRoles)('ADMIN', 'SALES', 'ACCOUNTS', 'WAREHOUSE'), customer_controller_1.getCustomers);
+router.get('/:id', (0, auth_1.requireRoles)('ADMIN', 'SALES', 'ACCOUNTS', 'WAREHOUSE'), customer_controller_1.getCustomerById);
+router.post('/', (0, auth_1.requireRoles)('ADMIN', 'SALES'), (0, validate_1.validateRequest)(customer_controller_1.customerSchema), customer_controller_1.createCustomer);
+router.put('/:id', (0, auth_1.requireRoles)('ADMIN', 'SALES'), (0, validate_1.validateRequest)(customer_controller_1.customerSchema), customer_controller_1.updateCustomer);
+router.post('/:id/notes', (0, auth_1.requireRoles)('ADMIN', 'SALES', 'ACCOUNTS'), (0, validate_1.validateRequest)(customer_controller_1.followUpNoteSchema), customer_controller_1.addFollowUpNote);
+exports.default = router;
